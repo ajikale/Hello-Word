@@ -6,7 +6,7 @@ def shuffle_list(mylist):
     return mylist
 def player_guess():
     guess=''
-    while guess not in [0,1,2,3]:
+    while guess not in [0,1,2]:
         guess=int(input("Choose the cup "))
     return guess
 def check_guess(mylist,guess):
@@ -16,7 +16,7 @@ def check_guess(mylist,guess):
         print("Wrong guess")
         print(mylist)
         
-mylist=['','O','','']
+mylist=['','O','']
 mixed_list=shuffle_list(mylist)
 guess=player_guess()
 check_guess(mixed_list,guess)
